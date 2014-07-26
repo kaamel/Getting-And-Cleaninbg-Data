@@ -26,9 +26,7 @@ rm(list=ls())
 
 ####### helper function to download and unzip data file if needed
 downloadAndUnzipFile <- function(zipUrl, destDir) {
-  destDir
-  if (!file.exists(destDir)) {
-    
+  if (!file.exists(destDir)) {    
     temp <- tempfile()
     download.file(url = zipUrl, destfile = temp)
     unzip(temp)
